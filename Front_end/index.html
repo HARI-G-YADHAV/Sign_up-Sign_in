@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Include Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>sign</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="Header">
+            <div class="button-container" >
+                <button  onclick="switchsignup()"  class="btn btn-dark btn-lg">SIGN UP</button>
+                <div class="vl"></div>
+                <button  onclick="switchsignin()"  class="btn btn-dark btn-lg">SIGN IN</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="dynamicContent" class="col-md-6" style="padding: 5rem 20rem;">
+                    <!-- Sign in form -->
+                    <form  action="action_page.php" method="get" >
+                        <div  id="signupForm"  >    
+                            <label for="email"><b>Email</b></label>
+                            <br>
+                            <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+                            <br>
+                            <label for="psw"><b>Password</b></label>
+                            <br>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                            <br>
+                            <br>
+                            <button  onclick="signin()" class="button2">Sign in</button>
+                        </div>
+                    </form>
+                    <!-- sign up form-->
+                    <form action="action_page.php" method="get" id="signinForm">
+                        <div class="form-group">    
+                            <label for="email"><b>Email</b></label>
+                            <br>
+                            <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+                            <br>
+                            <label for="psw"><b>Password</b></label>
+                            <br>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                            <br>
+                            <label style="width: 500px;" for="psw-repeat"><b>Repeat Password</b></label>
+                            <br>
+                            <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+                            <br>
+                            <br>
+                            <button  onclick="signup()" class="button2" >Sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Include Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
